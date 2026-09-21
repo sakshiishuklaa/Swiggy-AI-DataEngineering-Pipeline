@@ -1,0 +1,12 @@
+.env
+**/ .env
+ai/.env
+airflow/.env
+airflow/logs/
+swiggy/target/
+swiggy/logs/
+data/
+*.csv
+*.parquet
+data.zip
+data/

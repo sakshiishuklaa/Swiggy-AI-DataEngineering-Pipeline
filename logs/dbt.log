@@ -1,0 +1,171 @@
+[0m22:33:49.965347 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bebd400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d61ed50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d61ead0>]}
+
+
+============================== 22:33:49.969371 | beb736ae-6580-415d-85dc-0de3b69de176 ==============================
+[0m22:33:49.969371 [info ] [MainThread]: Running with dbt=1.12.5
+[0m22:33:49.969831 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'warn_error': 'None', 'invocation_command': 'dbt init swiggy', 'partial_parse': 'True', 'debug': 'False', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'log_cache_events': 'False', 'fail_fast': 'False', 'version_check': 'True', 'indirect_selection': 'eager', 'target_path': 'None', 'use_experimental_parser': 'False', 'use_colors': 'True', 'empty': 'None', 'hints_enabled': 'True', 'profiles_dir': '/Users/sakshishukla/.dbt', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'write_json': 'True', 'log_path': 'logs', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'static_parser': 'True'}
+[0m22:33:49.983453 [debug] [MainThread]: Starter project path: /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/dbt/include/starter_project
+[0m22:33:49.990586 [info ] [MainThread]: Setting up your profile.
+[0m22:35:17.256302 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m22:35:17.256724 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m22:35:17.256967 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m22:46:07.913426 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+
+[0m22:46:07.928016 [error] [MainThread]: Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/dbt/cli/requires.py", line 198, in wrapper
+    result, success = func(*args, **kwargs)
+                      ~~~~^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/dbt/cli/requires.py", line 144, in wrapper
+    return func(*args, **kwargs)
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/dbt/cli/main.py", line 504, in init
+    results = task.run()
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/dbt/task/init.py", line 363, in run
+    self.setup_profile(profile_name)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/dbt/task/init.py", line 265, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/dbt/task/init.py", line 182, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/dbt/task/init.py", line 166, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/dbt/task/init.py", line 119, in generate_target_from_input
+    target = self.generate_target_from_input(
+        profile_template_local[key][choice], target
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/dbt/task/init.py", line 132, in generate_target_from_input
+    target[key] = click.prompt(
+                  ~~~~~~~~~~~~^
+        text, default=default, hide_input=hide_input, type=type
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/click/termui.py", line 262, in prompt
+    value = prompt_func(prompt)
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/click/termui.py", line 245, in prompt_func
+    raise Abort() from None
+click.exceptions.Abort
+
+[0m22:46:07.937383 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": false, "command_wall_clock_time": 738.0447, "process_in_blocks": "0", "process_kernel_time": 0.387398, "process_mem_max_rss": "256688128", "process_out_blocks": "0", "process_user_time": 2.526412}
+[0m22:46:07.939976 [debug] [MainThread]: Command `dbt init` failed at 22:46:07.939798 after 738.05 seconds
+[0m22:46:07.940749 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x117e80180>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114f24710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x114ec78a0>]}
+[0m22:46:07.941296 [debug] [MainThread]: Flushing usage events
+[0m22:46:09.183976 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:46:16.708791 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ca5d400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e1fad50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e1faad0>]}
+
+
+============================== 22:46:16.712971 | 494959c5-a943-4499-8257-01427b5d25e6 ==============================
+[0m22:46:16.712971 [info ] [MainThread]: Running with dbt=1.12.5
+[0m22:46:16.713438 [debug] [MainThread]: running dbt with arguments {'invocation_command': 'dbt init swiggy', 'no_print': 'None', 'fail_fast': 'False', 'version_check': 'True', 'target_path': 'None', 'log_format': 'default', 'write_json': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True', 'log_path': 'logs', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'maximum_seed_size_mib': '1', 'debug': 'False', 'profiles_dir': '/Users/sakshishukla/.dbt', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'introspect': 'True', 'quiet': 'False', 'warn_error': 'None', 'cache_selected_only': 'False', 'hints_enabled': 'True', 'printer_width': '80'}
+[0m22:46:16.726767 [info ] [MainThread]: A project called swiggy already exists here.
+[0m22:46:16.729316 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 0.101683795, "process_in_blocks": "0", "process_kernel_time": 0.17256, "process_mem_max_rss": "149422080", "process_out_blocks": "0", "process_user_time": 1.88417}
+[0m22:46:16.729708 [debug] [MainThread]: Command `dbt init` succeeded at 22:46:16.729634 after 0.10 seconds
+[0m22:46:16.729954 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e005f30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e0a6c30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e2a4050>]}
+[0m22:46:16.730210 [debug] [MainThread]: Flushing usage events
+[0m22:46:17.727537 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m22:46:37.745788 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c73d400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10de9ad50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10de9aad0>]}
+
+
+============================== 22:46:37.750069 | eaad949e-49a7-4d0e-bcec-78de03512a97 ==============================
+[0m22:46:37.750069 [info ] [MainThread]: Running with dbt=1.12.5
+[0m22:46:37.750525 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'log_format': 'default', 'write_json': 'True', 'empty': 'None', 'debug': 'False', 'log_path': 'logs', 'target_path': 'None', 'version_check': 'True', 'log_cache_events': 'False', 'no_print': 'None', 'profiles_dir': '/Users/sakshishukla/.dbt', 'printer_width': '80', 'partial_parse': 'True', 'static_parser': 'True', 'maximum_seed_size_mib': '1', 'use_colors': 'True', 'use_experimental_parser': 'False', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'invocation_command': 'dbt init swiggy', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'hints_enabled': 'True', 'indirect_selection': 'eager', 'warn_error': 'None', 'fail_fast': 'False'}
+[0m22:46:37.763561 [debug] [MainThread]: Starter project path: /Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/site-packages/dbt/include/starter_project
+[0m22:46:37.770898 [info ] [MainThread]: Setting up your profile.
+[0m22:46:44.205255 [debug] [MainThread]: Snowflake adapter: Setting snowflake.connector to ERROR (file logging only)
+[0m22:46:44.205746 [debug] [MainThread]: Snowflake adapter: Setting botocore to ERROR (file logging only)
+[0m22:46:44.206001 [debug] [MainThread]: Snowflake adapter: Setting boto3 to ERROR (file logging only)
+[0m22:48:40.500909 [info ] [MainThread]: Profile swiggy written to /Users/sakshishukla/.dbt/profiles.yml using target's profile_template.yml and your supplied values.
+[0m22:48:40.505376 [info ] [MainThread]: Running dbt debug to validate the project...
+[0m22:48:40.506787 [info ] [MainThread]: dbt version: 1.12.5
+[0m22:48:40.507270 [info ] [MainThread]: python version: 3.14.6
+[0m22:48:40.507948 [info ] [MainThread]: python path: /Library/Frameworks/Python.framework/Versions/3.14/bin/python3.14
+[0m22:48:40.508538 [info ] [MainThread]: os info: macOS-26.6.2-arm64-arm-64bit-Mach-O
+[0m22:48:40.555476 [info ] [MainThread]: Using profiles dir at /Users/sakshishukla/.dbt
+[0m22:48:40.555844 [info ] [MainThread]: Using profiles.yml file at /Users/sakshishukla/.dbt/profiles.yml
+[0m22:48:40.556067 [info ] [MainThread]: Using dbt_project.yml file at /Users/sakshishukla/Desktop/SWIGGY_DATA_PIPELINE/swiggy/dbt_project.yml
+[0m22:48:40.556709 [info ] [MainThread]: adapter type: snowflake
+[0m22:48:40.556907 [info ] [MainThread]: adapter version: 1.12.1
+[0m22:48:40.640931 [info ] [MainThread]: Configuration:
+[0m22:48:40.641322 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m22:48:40.641538 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m22:48:40.641723 [info ] [MainThread]: Required dependencies:
+[0m22:48:40.642012 [debug] [MainThread]: Executing "git --help"
+[0m22:48:40.665428 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m22:48:40.666214 [debug] [MainThread]: STDERR: "b''"
+[0m22:48:40.666480 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m22:48:40.666730 [info ] [MainThread]: Connection:
+[0m22:48:40.666984 [info ] [MainThread]:   account: XTXEOHR-JI89090
+[0m22:48:40.667174 [info ] [MainThread]:   user: SAKSHISHUKLA
+[0m22:48:40.667342 [info ] [MainThread]:   database: SWIGGY_WH
+[0m22:48:40.667505 [info ] [MainThread]:   warehouse: SWIGGY_WH
+[0m22:48:40.667667 [info ] [MainThread]:   role: DBT_ROLE
+[0m22:48:40.667829 [info ] [MainThread]:   schema: STAGING
+[0m22:48:40.667994 [info ] [MainThread]:   authenticator: None
+[0m22:48:40.668154 [info ] [MainThread]:   oauth_client_id: None
+[0m22:48:40.668439 [info ] [MainThread]:   query_tag: None
+[0m22:48:40.668607 [info ] [MainThread]:   client_session_keep_alive: False
+[0m22:48:40.668773 [info ] [MainThread]:   host: None
+[0m22:48:40.668930 [info ] [MainThread]:   port: None
+[0m22:48:40.669089 [info ] [MainThread]:   proxy_host: None
+[0m22:48:40.669245 [info ] [MainThread]:   proxy_port: None
+[0m22:48:40.669395 [info ] [MainThread]:   protocol: None
+[0m22:48:40.669550 [info ] [MainThread]:   connect_retries: 1
+[0m22:48:40.669705 [info ] [MainThread]:   connect_timeout: None
+[0m22:48:40.669858 [info ] [MainThread]:   retry_on_database_errors: False
+[0m22:48:40.670017 [info ] [MainThread]:   retry_all: False
+[0m22:48:40.670168 [info ] [MainThread]:   insecure_mode: False
+[0m22:48:40.670318 [info ] [MainThread]:   reuse_connections: True
+[0m22:48:40.670474 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m22:48:40.670627 [info ] [MainThread]:   workload_identity_provider: None
+[0m22:48:40.670789 [info ] [MainThread]:   workload_identity_entra_resource: None
+[0m22:48:40.670944 [info ] [MainThread]:   platform_detection_timeout_seconds: 0.0
+[0m22:48:40.671521 [info ] [MainThread]: Registered adapter: snowflake=1.12.1
+[0m22:48:40.771957 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m22:48:40.774212 [debug] [MainThread]: Using snowflake connection "debug"
+[0m22:48:40.774477 [debug] [MainThread]: On debug: select 1 as id
+[0m22:48:40.774686 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m22:48:41.727400 [debug] [MainThread]: SQL status: SUCCESS 1 in 0.953 seconds
+[0m22:48:41.728531 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m22:48:41.728906 [info ] [MainThread]: [32mAll checks passed![0m
+[0m22:48:41.729451 [info ] [MainThread]: Your new dbt project "swiggy" was created!
+Initialized new project in /Users/sakshishukla/Desktop/SWIGGY_DATA_PIPELINE/swiggy/swiggy
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m22:48:41.736029 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 124.063675, "process_in_blocks": "0", "process_kernel_time": 0.456974, "process_mem_max_rss": "277676032", "process_out_blocks": "0", "process_user_time": 3.103599}
+[0m22:48:41.736777 [debug] [MainThread]: Command `dbt init` succeeded at 22:48:41.736663 after 124.06 seconds
+[0m22:48:41.737072 [debug] [MainThread]: Connection 'debug' was left open.
+[0m22:48:41.737301 [debug] [MainThread]: On debug: Close
+[0m22:48:41.871081 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11573fce0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a7be450>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c9097b0>]}
+[0m22:48:41.872025 [debug] [MainThread]: Flushing usage events
+[0m22:48:42.944714 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m23:18:42.280125 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10be1d400>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d5ead50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d5eaad0>]}
+
+
+============================== 23:18:42.284428 | a39aa012-7e4c-4c2d-9068-accdef5da12c ==============================
+[0m23:18:42.284428 [info ] [MainThread]: Running with dbt=1.12.5
+[0m23:18:42.284916 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/Users/sakshishukla/.dbt', 'fail_fast': 'False', 'version_check': 'True', 'printer_width': '80', 'no_print': 'None', 'maximum_seed_size_mib': '1', 'write_json': 'True', 'partial_parse': 'True', 'invocation_command': 'dbt run --select staging', 'log_format': 'default', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'empty': 'False', 'send_anonymous_usage_stats': 'True', 'log_path': 'logs', 'cache_selected_only': 'False', 'quiet': 'False', 'debug': 'False', 'warn_error': 'None', 'use_experimental_parser': 'False', 'introspect': 'True', 'log_cache_events': 'False', 'hints_enabled': 'True', 'static_parser': 'True', 'use_colors': 'True', 'indirect_selection': 'eager'}
+[0m23:18:42.285411 [error] [MainThread]: [[31mERROR[0m]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/sakshishukla/Desktop/SWIGGY_DATA_PIPELINE/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m23:18:42.288804 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.094648, "process_in_blocks": "0", "process_kernel_time": 0.23434, "process_mem_max_rss": "149684224", "process_out_blocks": "0", "process_user_time": 1.957563}
+[0m23:18:42.289212 [debug] [MainThread]: Command `dbt run` failed at 23:18:42.289135 after 0.10 seconds
+[0m23:18:42.289460 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d3c3bb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d599d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d658af0>]}
+[0m23:18:42.289698 [debug] [MainThread]: Flushing usage events
+[0m23:18:43.464314 [debug] [MainThread]: An error was encountered while trying to flush usage events

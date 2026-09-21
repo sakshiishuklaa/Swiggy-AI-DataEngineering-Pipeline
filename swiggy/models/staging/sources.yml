@@ -1,0 +1,19 @@
+sources:
+  - name: raw
+    database: SWIGGY
+    schema: RAW
+    tables:
+      - name: restaurants
+        description: "This table contains raw data of restaurants from Swiggy"
+      - name: users
+        description: "This table contains raw data of users from Swiggy"
+      - name: food
+        description: "This table contains raw data of food from Swiggy"
+      - name: orders
+        description: "This table contains raw data of orders from Swiggy"
+      - name: order_items
+        description: "This table contains raw data of order items from Swiggy"
+      - name: reviews
+        description: "This table contains raw data of reviews from Swiggy"
+      - name: menu
+        description: "This table contains raw data of menu from Swiggy"

@@ -1,0 +1,5 @@
+{"timestamp":"2026-09-21T08:29:23.535604","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2026-09-21T08:29:23.536059","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/swiggy_batch.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2026-09-21T08:29:23.571761","level":"info","event":"Tmp dir root location: /tmp","logger":"airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook"}
+{"timestamp":"2026-09-21T08:29:23.572174","level":"info","event":"Running command: ['/usr/bin/bash', '-c', 'python /opt/airflow/ai/enrich_reviews.py']","logger":"airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook"}
+{"timestamp":"2026-09-21T08:29:23.576625","level":"info","event":"Output:","logger":"airflow.task.hooks.airflow.providers.standard.hooks.subprocess.SubprocessHook"}

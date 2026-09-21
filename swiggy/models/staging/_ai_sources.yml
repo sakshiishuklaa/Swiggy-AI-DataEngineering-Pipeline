@@ -1,0 +1,10 @@
+version: 2
+
+sources:
+  - name: ai
+    database: SWIGGY
+    schema: AI
+    description: "LLM-enriched tables produced by ai/enrich_reviews.py ."
+    tables:
+      - name: review_enriched
+        description: "Per-review sentiment + topic + key issue from the LLM."
