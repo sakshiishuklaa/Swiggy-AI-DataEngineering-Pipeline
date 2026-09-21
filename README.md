@@ -29,7 +29,7 @@ The pipeline adopts the **Medallion Architecture**, ensuring high debuggability,
 
 ---
 
-## Dataset Domain (`swiggy-data`)
+## Dataset Domain (swiggy-data)
 The core pipeline processes a massive volume of simulated food-delivery transactions:
 * **Users:** Customer profile data (signup date, city).
 * **Restaurants:** Merchant information (cuisine, location, ratings).
